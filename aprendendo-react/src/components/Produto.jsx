@@ -1,4 +1,4 @@
-export function Produto({ produto }) {
+export function Produto({ produto,  excluirProduto}) {
   return (
     <li
       style={{
@@ -7,6 +7,8 @@ export function Produto({ produto }) {
       }}
     >
       {produto.nome} - {produto.disponivel ? "Disponível" : "Indisponível"} - Quantidade: {produto.quantidade}
+
+      <button onClick={excluirProduto}>Excluir esse produto</button> 
     </li>
   );
 }
